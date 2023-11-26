@@ -10,4 +10,4 @@ imagestring($im, 5, 0, 0, 'Hello world!', $textcolor);
 header('Content-type: image/png');
 imagepng($im);
 //освобождение памяти, занятой картинкой
-imagedestroy($im);
+//imagedestroy($im);

@@ -26,8 +26,13 @@ imagerectangle($canvas, 50, 50, 150, 150, $pink);
 imagerectangle($canvas, 45, 60, 120, 100, $white);
 imagerectangle($canvas, 100, 120, 75, 160, $green);
 
-imageline($canvas, 0, 0, imageSX($canvas)-1, imageSY($canvas)-1, $pink);
-
+imageline($canvas, 0, 0, imageSX($canvas) - 1, imageSY($canvas) - 1, $green);
+imagepolygon($canvas, [
+    0, 0,
+    120, 100,
+    150, 200,
+],
+    $pink);
 // Вывод и освобождение памяти
 header('Content-Type: image/jpeg');
 imagejpeg($canvas);
